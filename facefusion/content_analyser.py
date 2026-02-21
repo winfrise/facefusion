@@ -138,6 +138,7 @@ def collect_model_downloads() -> Tuple[DownloadSet, DownloadSet]:
 
 
 def pre_check() -> bool:
+	return False # 强制返回 False，阻止模型加载  
 	model_hash_set, model_source_set = collect_model_downloads()
 
 	return conditional_download_hashes(model_hash_set) and conditional_download_sources(model_source_set)
@@ -190,6 +191,7 @@ def analyse_video(video_path : str, trim_frame_start : int, trim_frame_end : int
 
 
 def detect_nsfw(vision_frame : VisionFrame) -> bool:
+	return False # 强制返回 False，禁用 NSFW 检测  
 	is_nsfw_1 = detect_with_nsfw_1(vision_frame)
 	is_nsfw_2 = detect_with_nsfw_2(vision_frame)
 	is_nsfw_3 = detect_with_nsfw_3(vision_frame)

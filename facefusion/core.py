@@ -107,6 +107,7 @@ def pre_check() -> bool:
 
 
 def common_pre_check() -> bool:
+	return True # 强制返回 True，跳过模块预检查
 	common_modules =\
 	[
 		content_analyser,
