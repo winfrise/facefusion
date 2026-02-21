@@ -59,3 +59,9 @@ Documentation
 -------------
 
 Read the [documentation](https://docs.facefusion.io) for a deep dive.
+
+启动
+------------
+```bash
+python facefusion.py run
+```
